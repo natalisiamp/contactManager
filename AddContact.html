@@ -1,3 +1,4 @@
+<!-- this page works and does not need to be modified-->
 <html>
   <head>
     <title>Contact Manager</title>
@@ -22,9 +23,6 @@
         false
       );
     </script>
-    <script type="text/javascript">
-      getUserandContactID();
-    </script>
   </head>
   <body>
     <!--This page creates a new contact for the user-->
@@ -32,7 +30,7 @@
 
     <!--does log out-->
     <div id="loggedInDiv">
-      <!--<span id="userName"></span><br />-->
+      <span id="userName"></span><br />
       <button
         type="button"
         id="logoutButton"
@@ -44,38 +42,22 @@
     </div>
 
     <div id="accessUIDiv">
-      <h3>Please Enter Your Contact's Updated Information</h3>
-
-
-      <br /><br />
-      <label for="contactFName"> <b>First Name:</b> </label><br />
-      <input type="text" id="firstName"  />
-      <label for="contactLastName">
-        <b><br />Last Name:</b> </label
-      ><br />
-      <input type="text" id="lastName"  />
-      <label for="contactPhone"> <b>Phone:</b> </label><br />
-      <input type="text" id="phoneNumber"  />
-      <label for="contactEmail"> <b>Email:</b> </label><br />
-      <input type="text" id="emailVal"  />
-      <label for="contactAddress"> <b>Address:</b> </label><br />
-      <input type="text" id="address"  />
-      <label for="contactNotes"> <b>Notes:</b> </label><br />
-      <input type="text" id="notes" />
-      
-     <script type="text/javascript">
-         doTest();
-      </script>
-
+      <input type="text" id="firstName" placeholder="Contact First Name" />
+      <input type="text" id="lastName" placeholder="Contact Last Name" />
+      <input type="text" id="phoneNumber" placeholder="Contact Phone Number" />
+      <input type="text" id="emailVal" placeholder="Contact Email" />
+      <input type="text" id="address" placeholder="Contact Address" />
+      <input type="text" id="notes" placeholder="Notes" />
 
       <button
         type="button"
-        id="updateContactButton"
+        id="addContactButton"
         class="buttons"
-        onclick="updateContact();"
+        onclick="addContact();"
       >
-        Update Contact
-      </button>
+        Add Contact</button
+      ><br />
+      <span id="contactAddResult"></span>
       <button
         type="button"
         id="backtoSearch"
@@ -84,8 +66,6 @@
       >
         Back to Search Page
       </button>
-      <br />
-      <span id="contactUpdateResult"></span>
     </div>
   </body>
 </html>
