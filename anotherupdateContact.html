@@ -1,0 +1,89 @@
+<html>
+  <head>
+    <title>Contact Manager</title>
+    <meta name="viewport" content="with-device-width, initial-scale=1.0" />
+    <script type="text/javascript" src="js/md5.js"></script>
+    <script type="text/javascript" src="js/code.js"></script>
+    <link href="css/styles.css" rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script type="text/javascript">
+      document.addEventListener(
+        "DOMContentLoaded",
+        function () {
+          readCookie();
+        },
+        false
+      );
+    </script>
+    <script type="text/javascript">
+      getUserandContactID();
+    </script>
+  </head>
+  <body>
+    <!--This page creates a new contact for the user-->
+    <center>Contact Manager</center>
+
+    <!--does log out-->
+    <div id="loggedInDiv">
+      <!--<span id="userName"></span><br />-->
+      <button
+        type="button"
+        id="logoutButton"
+        class="buttons"
+        onclick="doLogout();"
+      >
+        Log Out
+      </button>
+    </div>
+
+    <div id="accessUIDiv">
+      <h3>Please Enter Your Contact's Updated Information</h3>
+
+      <br /><br />
+      <label for="contactFName"> <b>First Name:</b> </label><br />
+      <input type="text" id="firstName"  />
+      <label for="contactLastName">
+        <b><br />Last Name:</b> </label
+      ><br />
+      <input type="text" id="lastName"  />
+      <label for="contactPhone"> <b>Phone:</b> </label><br />
+      <input type="text" id="phoneNumber"  />
+      <label for="contactEmail"> <b>Email:</b> </label><br />
+      <input type="text" id="emailVal"  />
+      <label for="contactAddress"> <b>Address:</b> </label><br />
+      <input type="text" id="address"  />
+      <label for="contactNotes"> <b>Notes:</b> </label><br />
+      <input type="text" id="notes" />
+      
+     <script type="text/javascript">
+         doTest();
+      </script>
+
+      <button
+        type="button"
+        id="updateContactButton"
+        class="buttons"
+        onclick="updateContact();"
+      >
+        Update Contact
+      </button>
+      <button
+        type="button"
+        id="backtoSearch"
+        class="buttons"
+        onclick="window.location.href = 'contact.html'"
+      >
+        Back to Search Page
+      </button>
+      <br />
+      <span id="contactUpdateResult"></span>
+    </div>
+  </body>
+</html>
