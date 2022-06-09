@@ -1,2 +1,2 @@
 # contactManager
-This is our project for COP4331.
+This is our small project for COP4331.
